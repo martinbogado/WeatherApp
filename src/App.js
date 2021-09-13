@@ -18,8 +18,8 @@ export default function App() {
   const mobile = useMedia({maxWidth: '768px'});
 
   function onSearch(ciudad) {
-    //Acá habría que hacer el llamado a la API para obtener los datos de la ciudad
-    //pero de momento agregaremos una ciudad por default para ver que funcione
+    
+    
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=en&appid=f39f8244f4ecbb533c4bb3b2757e8589&units=metric`)
     .then(r => r.json())
     .then((recurso) => {

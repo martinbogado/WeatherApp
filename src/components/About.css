@@ -81,7 +81,7 @@ text-transform: uppercase;
 .contactabt {
     display: absolute;
     vertical-align: top;
-    margin-left: 31%;
+    margin-left: 31.5%;
     margin-bottom: 10%;
 }
 
@@ -308,4 +308,17 @@ animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
         animation-delay: 800ms;
     }
 
+}
+
+@media screen and (max-width: 420px) {
+    .nameabt {
+        font-size: 1.85rem;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+    }
+    .contactabt {
+        display: absolute;
+        margin-left: 24%;
+        margin-bottom: 10%;
+    }
 }

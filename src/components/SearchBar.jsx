@@ -13,9 +13,12 @@ export default function SearchBar({onSearch}) {
 
   const onButtonClick = (e) => {
     e.preventDefault();
-    onSearch(city)
-    setCity('')
-    if(!mobile) {history.push('/')}
+
+    if(city !== '') {
+      onSearch(city)
+      setCity('')
+      if(!mobile) {history.push('/')}
+    }
    }
    
    const search = useRef()

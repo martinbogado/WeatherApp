@@ -90,3 +90,21 @@
   font-size: 22px;
   line-height: 40px;
 }
+
+@media screen and (max-width: 480px){
+  .alertcity{
+  
+    right: 0;
+    min-width: 400px; 
+
+  }
+}
+
+@media screen and (max-width: 400px){
+  .alertcity{
+  
+    right: 0;
+    min-width: 370px; 
+
+  }
+}

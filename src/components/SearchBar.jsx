@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import useMedia from 'use-media';
 
 
+
 export default function SearchBar({onSearch}) {
   const [city, setCity] = useState('');
 
@@ -24,9 +25,9 @@ export default function SearchBar({onSearch}) {
 
   return (
     <div className="search-box" ref={box} onMouseEnter={ () => {
-      search.current.classList.toggle('open')
-      }} onMouseLeave={ () =>
-        search.current.classList.remove('open')}>
+      if(!mobile) search.current.classList.toggle('open')
+      }} onMouseLeave={ () => {
+        if(!mobile) search.current.classList.remove('open')}}>
       <form  onSubmit={onButtonClick}>
         <input 
           className="search-txt"
@@ -37,7 +38,9 @@ export default function SearchBar({onSearch}) {
           onChange={e => setCity(e.target.value)}
         />
         
-        <button type="submit" className="search-btn" style={{ outline: 'none' }}>
+        <button type="submit" className="search-btn" onClick={() => {
+          if(mobile) search.current.classList.toggle('open')
+        }}  style={{ outline: 'none' }}>
           <i className="fas fa-search" ></i>
         </button>      
       </form>

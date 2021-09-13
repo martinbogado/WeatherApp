@@ -28,7 +28,7 @@ export default function Cards({cities, onClose}) {
     <div className='container'>
 
         <div><img src={`${arrow}`} className='flecha' ref={flecha} style={{ width: '45px' }} alt='arrow' /></div>
-        <div>
+        <div className='cartamobile'>
           <CartaP 
             name={cities[0].name}
             img={cities[0].img}

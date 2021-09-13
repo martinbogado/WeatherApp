@@ -49,3 +49,11 @@
     display: none !important;
   }
 }
+
+@media screen and (max-width: 400px){
+  .cartamobile{ 
+    position: fixed;
+    top: 12%;
+  }
+
+}

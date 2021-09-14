@@ -90,10 +90,14 @@
         cursor: pointer;
         z-index: 5;
     }
+    .burguer.open{
+        position: fixed;
+    }
+
 
 
     .nav-links {
-        position: fixed;
+        position: absolute;
         left: 0px;
         top: 0px;
         list-style: none;
@@ -105,6 +109,7 @@
         justify-content: space-around;
         align-items: center;
         z-index: 3;
+        
 
         clip-path: circle(100px at -14% -14% );
         -webkit-clip-path: circle(100px at -14% -14% );
@@ -113,9 +118,11 @@
     }
 
     .nav-links.open {
+        position: fixed;
         clip-path: circle(1200px at 0% 5% );
         -webkit-clip-path: circle(1200px at 0% 5% );  
         pointer-events: all;
+        
     }
 
     .nav-links li {
@@ -149,11 +156,26 @@
         transform: translate(-100%, -50%);
         width: max-content;
     }
-}
+} 
 
 @media screen and (max-width: 480px){
     .nav-links {
+
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        list-style: none;
+        display: flex;
+        background-color: rgba(54, 140, 169, 1);
         height: 100vh;
         width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 3;
+
+
+        
     }
+
 }

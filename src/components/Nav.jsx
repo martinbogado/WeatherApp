@@ -17,6 +17,7 @@ function Nav({onSearch}) {
   const linksh = useRef()
   const linksa = useRef()
   
+  const burg = useRef()
   const line1 = useRef()
   const line2 = useRef()
   const line3 = useRef()
@@ -25,7 +26,7 @@ function Nav({onSearch}) {
     <nav className="navbar">
       <Link to='/'>
         <span className="navbar-brand">
-          <img id="logoHenry" src={`images/icons/Logo.svg`} width="200" className="d-inline-block align-top" alt="" />
+          <img id="logoHenry" src={`images/icons/Logo.svg`} width="200" className="d-inline-block align-top" alt="home" />
         </span>
       </Link>
       <SearchBar
@@ -34,7 +35,7 @@ function Nav({onSearch}) {
       <Link to='/about' style={{ textDecoration: 'none' }} onMouseEnter={() => about.current.classList.toggle('hover')} onMouseLeave={() => about.current.classList.remove('hover')}>
         <span ref={about} className="about" >About</span>
       </Link>
-      <div className='burguer' onClick={() => {
+      <div className='burguer' ref={burg} onClick={() => {
           navLinks.current.classList.toggle('open');
           linksa.current.classList.toggle('fade')
           linksl.current.classList.toggle('fade')
@@ -42,6 +43,7 @@ function Nav({onSearch}) {
           line2.current.classList.toggle('open')
           line1.current.classList.toggle('open')
           line3.current.classList.toggle('open')
+          burg.current.classList.toggle('open')
         }}>
         <div className='line1' ref={line1}></div>
         <div className='line2' ref={line2}></div>
@@ -57,6 +59,7 @@ function Nav({onSearch}) {
           line2.current.classList.remove('open')
           line1.current.classList.remove('open')
           line3.current.classList.remove('open')
+          burg.current.classList.remove('open')
         }}>
           <li ref={linksh}> Home </li> 
         </NavLink>
@@ -68,6 +71,7 @@ function Nav({onSearch}) {
           line2.current.classList.remove('open')
           line1.current.classList.remove('open')
           line3.current.classList.remove('open')
+          burg.current.classList.remove('open')
         }}>
           <li ref={linksa} > About </li>
         </NavLink>
@@ -79,6 +83,7 @@ function Nav({onSearch}) {
           line2.current.classList.remove('open')
           line1.current.classList.remove('open')
           line3.current.classList.remove('open')
+          burg.current.classList.remove('open')
         }}>
           <li ref={linksl}> List </li>
         </NavLink>

@@ -6,6 +6,8 @@ import './container.css'
 import arrow from './images/icons/down-arrow.svg'
 import { useRef } from 'react';
 import "animate.css"
+import d11 from './images/icons/11d.svg'
+import './Intropage.css'
 
 export default function Cards({cities, onClose}) {
 
@@ -59,7 +61,10 @@ export default function Cards({cities, onClose}) {
     );
   } else {
     return(
-      <div> </div>
+      <div className='intropage'> 
+        <img src={`${d11}`} alt='sun' />
+        <p className='intromsg'> No cities yet</p>
+      </div>
     )
   }
 }

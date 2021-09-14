@@ -8,6 +8,7 @@ import { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import countrys from '../countrys.json'
 import "animate.css"
+import "./Error404.css"
 
 import humidity from './images/icons/humidity.svg'
 import d01 from './images/icons/01d.svg'
@@ -196,7 +197,7 @@ export default function Ciudad({city}) {
                     <p className='infoinfocity' style={{ color: `${colortext}`  }}>
                     <img
                         src={`https://flagcdn.com/28x21/${city[0].country.toLowerCase()}.png`}
-                        srcset={`https://flagcdn.com/56x42/${city[0].country.toLowerCase()}.png 2x,
+                        srcSet={`https://flagcdn.com/56x42/${city[0].country.toLowerCase()}.png 2x,
                             https://flagcdn.com/84x63/${city[0].country.toLowerCase()}.png 3x`}
                         width="28"
                         height="21"
@@ -238,7 +239,10 @@ export default function Ciudad({city}) {
         )
     } else {
         return(
-          <div>Esta ciudad no se encuentra</div>
+          <div className='errorcity'>
+              <img src={`${n01}`} className='errorMoon' alt='error moon'/>
+              <p className='errormsg'><span className='span404'>4 4</span>City not found</p>
+          </div>
         )
     }
     

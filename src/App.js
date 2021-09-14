@@ -17,8 +17,8 @@ export default function App() {
   const cityadd = useRef()
   const mobile = useMedia({maxWidth: '768px'});
 
+
   function onSearch(ciudad) {
-    
     
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&lang=en&appid=f39f8244f4ecbb533c4bb3b2757e8589&units=metric`)
     .then(r => r.json())
@@ -52,6 +52,7 @@ export default function App() {
         if(index === -1){
 
           if(mobile){
+            cityadd.current.style.display = 'inline'
             cityadd.current.classList.toggle("show")
             cityadd.current.classList.remove("hidecity")
             cityadd.current.classList.toggle("showAlert")
@@ -60,6 +61,7 @@ export default function App() {
               cityadd.current.classList.toggle("hidecity")
               setTimeout(function(){
                 cityadd.current.classList.remove("showAlert")
+                cityadd.current.style.display = 'none'
               },1000);
             },2500);
           }
@@ -80,9 +82,7 @@ export default function App() {
   
   return (
     <div className="App">
-      { /* Tu código acá: */ }
       
-
       <Nav onSearch={onSearch} />
       <div className="cityadded">
         <div className="alertcity hidecity" ref={cityadd}>
@@ -93,6 +93,7 @@ export default function App() {
                  cityadd.current.classList.toggle("hidecity")
                  setTimeout(function(){
                    cityadd.current.classList.remove("showAlert")
+                   cityadd.current.style.display = 'none'
                  },1000);
               }}>
                 <span className="fas fa-times"></span>

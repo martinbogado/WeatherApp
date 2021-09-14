@@ -9,6 +9,7 @@
 }
 
 .alertcity{
+  display: none;
   background: #C5F3D7;
   padding: 20px 40px;
   min-width: 400px;

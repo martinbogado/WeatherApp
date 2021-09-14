@@ -114,7 +114,7 @@
     display: grid;
     grid-template-columns: [x0] 1fr [x1] 20px [x2];
     grid-template-rows: [y0] 30px [y1] 1fr [y2] 60px [y3];
-    /* background-color: rgba(43, 38, 58, 1); */
+    
   } 
   .icono{
     grid-column: x0 / x1;

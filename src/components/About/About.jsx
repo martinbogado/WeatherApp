@@ -1,5 +1,5 @@
 import './About.css'
-import portrait from './images/icons/Portrait.jpg'
+import portrait from '../images/Portrait.jpg'
 import { useRef } from 'react'
 
 export default function About() {

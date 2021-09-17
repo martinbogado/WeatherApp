@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import './App.css';
-import Cards from './components/Cards.jsx';
-import Nav from './components/Nav.jsx'
 import { Route, Switch } from 'react-router-dom'
 import { useRef } from 'react';
-import About from './components/About.jsx'
-import Ciudad from './components/Ciudad.jsx'
-import List from './components/List.jsx'
-import swal from 'sweetalert';
-import './components/Alert.css'
 import useMedia from 'use-media';
+
+import Cards from '../components/Cards/Cards.jsx';
+import Nav from '../components/Nav/Nav.jsx'
+import About from '../components/About/About.jsx'
+import Ciudad from '../components/Ciudad/Ciudad.jsx'
+import List from '../components/List/List.jsx'
+import swal from 'sweetalert';
+
+import './App.css';
+import '../components/Alert.css'
+
 
 export default function App() {
   const [cities, setCities] = useState([]);
@@ -69,7 +72,7 @@ export default function App() {
           setCities(oldCities => [ciudad, ...oldCities]);
         }
       } else {
-        swal("City not found!", "The city you are looking for is not found", "error");
+        swal("City not found!", "", "error");
       }
     });
 

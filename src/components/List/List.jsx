@@ -1,7 +1,9 @@
 import React from 'react';
-import './Cards.css';
-import Card from './Card.jsx';
-import './container.css'
+
+import Card from '../Card/Card.jsx';
+
+import '../Cards/Cards.css';
+import '../container.css'
 import './List.css'
 
 

@@ -12,12 +12,6 @@
   padding: .8%;
 }
 
-/* @for $i from 1 through 10 {
-  .cards:nth-child(#{$i}n) {
-      animation-delay: #{$i * 0.5}s;
-  }
-} */
-
 .flecha{
   position: absolute;
   width: 120px;

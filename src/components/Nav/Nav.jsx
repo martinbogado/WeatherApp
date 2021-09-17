@@ -1,9 +1,9 @@
-import React from 'react';
-import SearchBar from './SearchBar.jsx';
-import './Nav.css';
-import { useRef } from 'react';
-//Nav.js
+import React, { useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+
+import SearchBar from '../SearchBar/SearchBar.jsx';
+
+import './Nav.css';
 import "animate.css"
 
 

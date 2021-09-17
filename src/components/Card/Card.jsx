@@ -1,11 +1,12 @@
-import React from 'react';
-import './Card.css';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom'
-import { useRef } from 'react';
-import "animate.css"
 import useMedia from 'use-media';
 
-export default function Card ({ name, img, onClose, id ,temp ,wind ,humidity ,pressure}) {
+import './Card.css';
+import "animate.css"
+
+
+export default function Card ({ name, img, onClose, id ,temp ,wind ,humidity ,pressure, nmro}) {
 
   let color = ''
   let colortext = ''
@@ -22,7 +23,7 @@ export default function Card ({ name, img, onClose, id ,temp ,wind ,humidity ,pr
      else imgC.current.style.height = '170px'
   }
   
-
+  
     return (
       <div className="card animate__animated animate__flipInX" style={{ backgroundColor: `${color}`  }}>
         <div className='encabezado'>

@@ -1,11 +1,13 @@
-import React from 'react';
-import './CartaP.css';
-import dia from './images/fdia.svg'
-import noche from './images/fnoche.svg'
-import nublado from './images/fnublado.svg'
+import React, { useRef }  from 'react';
 import { Link } from 'react-router-dom'
-import { useRef } from 'react';
+
+import './CartaP.css';
 import "animate.css"
+
+import dia from '../images/fdia.svg'
+import noche from '../images/fnoche.svg'
+import nublado from '../images/fnublado.svg'
+
 
 
 export default function CartaP ({ name, img, onClose, id, wind, temp, dt, timezone, humidity, pressure}) {

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import './SearchBar.css'
-import { useRef } from 'react';
+import React, { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import useMedia from 'use-media';
+
+import './SearchBar.css'
+
 
 
 

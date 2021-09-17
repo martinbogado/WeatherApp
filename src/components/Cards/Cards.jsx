@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
+
+import Card from '../Card/Card.jsx';
+import CartaP from '../CartaP/CartaP.jsx';
+
 import './Cards.css';
-import Card from './Card.jsx';
-import CartaP from './CartaP.jsx'
-import './container.css'
-import arrow from './images/icons/down-arrow.svg'
-import { useRef } from 'react';
-import "animate.css"
-import d11 from './images/icons/11d.svg'
-import './Intropage.css'
+import '../container.css';
+import "animate.css";
+import '../Intropage.css';
+import d11 from '../images/icons/11d.svg';
+import arrow from '../images/icons/down-arrow.svg';
+
 
 export default function Cards({cities, onClose}) {
 
   const flecha = useRef()
+  let nmro = 1
 
   if(cities.length){
     let ciudades = cities.slice(1, cities.length)
@@ -55,6 +58,7 @@ export default function Cards({cities, onClose}) {
             wind={c.wind}
             humidity={c.humidity}
             pressure={c.pressure}
+            nmro = {nmro++}
           /> )}
       </div>
     </div>

@@ -37,7 +37,7 @@ export default function About() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/martin-emmanuel-bogado-8a7b28162" style={{ textDecoration: 'none', color: 'black' }} rel="noreferrer" target="_blank" ref={linked} onMouseEnter={() => {linked.current.classList.toggle('hover')}} onMouseLeave={() => {linked.current.classList.remove('hover')}}>
+                    <a href="https://www.linkedin.com/in/martinbogado/" style={{ textDecoration: 'none', color: 'black' }} rel="noreferrer" target="_blank" ref={linked} onMouseEnter={() => {linked.current.classList.toggle('hover')}} onMouseLeave={() => {linked.current.classList.remove('hover')}}>
                       <i className="fab fa-linkedin"></i>
                     </a>
                   </li>

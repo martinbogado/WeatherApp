@@ -4,7 +4,7 @@ The end result is deployed in **Vercel**. You can access the webpage of this pro
 
 ## About
 
-This is an App created to practice **ReactJS** for Frontend Development during [Henry's Bootcamp](https://www.soyhenry.com/webfullstack). I created a SPA Using the [OpenWeather API](https://openweathermap.org/api) that allows the user to search for a specific city and its weather. If you want to you can access more information just by clicking on the city name on the card.
+This is an App created to practice **ReactJS** for Frontend Development. I created a SPA Using the [OpenWeather API](https://openweathermap.org/api) that allows the user to search for a specific city and its weather. If you want to you can access more information just by clicking on the city name on the card.
 
 </br>
 
